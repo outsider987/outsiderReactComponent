@@ -33,7 +33,7 @@ module.exports = {
         type: 'asset/resource',
       },
 
-      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
+    //   { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
         test: /\.tsx?$/,
         loader: 'ts-loader',
@@ -43,12 +43,12 @@ module.exports = {
           transpileOnly: true,
         },
       },
-      {
-        // this should be /\.handlebars$/
-        test: /\.hbs$/,
-        exclude: /(node_modules)/,
-        loader: 'handlebars-loader',
-      },
+    //   {
+    //     // this should be /\.handlebars$/
+    //     test: /\.hbs$/,
+    //     exclude: /(node_modules)/,
+    //     loader: 'handlebars-loader',
+    //   },
     ],
   },
   resolve: {
@@ -57,23 +57,23 @@ module.exports = {
       '~': path.resolve(__dirname, 'src/'),
     },
   },
-  plugins: [
-    new ForkTsCheckerWebpackPlugin(),
-    new CleanWebpackPlugin({
-      verbose: true,
-    }),
-    // new BundleAnalyzerPlugin({
-    //     "openAnalyzer": false,analyzerMode: 'static'
-    // }),
-    new HtmlWebpackPlugin({
-      test: /\.(html|png|svg)$/,
-      template: path.resolve(__dirname, 'src', 'public', 'index.html'),
-      filename: 'index.html',
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash].css',
-    }),
-  ],
+//   plugins: [
+//     new ForkTsCheckerWebpackPlugin(),
+//     new CleanWebpackPlugin({
+//       verbose: true,
+//     }),
+//     // new BundleAnalyzerPlugin({
+//     //     "openAnalyzer": false,analyzerMode: 'static'
+//     // }),
+//     new HtmlWebpackPlugin({
+//       test: /\.(html|png|svg)$/,
+//       template: path.resolve(__dirname, 'src', 'public', 'index.html'),
+//       filename: 'index.html',
+//     }),
+//     new MiniCssExtractPlugin({
+//       filename: 'css/[name].[hash].css',
+//     }),
+//   ],
   devtool: 'source-map',
 
   devServer: {
@@ -113,5 +113,8 @@ module.exports = {
         },
       },
     },
+  },
+  externals: {
+    react: 'react',
   },
 };

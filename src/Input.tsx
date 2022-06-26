@@ -15,9 +15,9 @@ const Input: React.FC<Props> = (props: Props) => {
     <div className={`flex flex-col ` + props.className}>
       {props.label != undefined && <span className="flex">{props.label}</span>}
       <input
-        className={`w-auto focus:outline-none focus:border-inputFcous 
+        className={`w-auto focus:outline-none focus:border-[#FF9B33] 
             focus:opacity-100 tracking-[0.25px] placeholder:opacity-30
-          bg-greyscale border-[3px] border-solid leading-[150%]
+          bg-black border-[3px] border-solid leading-[150%]
           border-white border-opacity-50  
            rounded-md pt-5 pb-[19px] px-[0.9375rem]
            text-white
