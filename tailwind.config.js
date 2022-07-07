@@ -1,6 +1,15 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+    addons: [
+       'storybook-addon-sass-postcss',
+       {
+         name: 'storybook-addon-sass-postcss',
+         options: {
+           loadSassAfterPostCSS: true,
+         },
+       },
+          ],
+  content: ['./src/stories/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
