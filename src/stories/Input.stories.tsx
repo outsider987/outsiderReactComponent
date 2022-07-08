@@ -1,15 +1,19 @@
 import React from 'react';
 // import './../index.scss';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {ComponentStory, ComponentMeta} from '@storybook/react';
 import Input from './Input';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Aha/Input',
-  component: Input ,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  component: Input,
+
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: {control: 'color'},
+    type: {
+      options: ['number', 'string'],
+      control: {type: 'radio'},
+    },
   },
 } as ComponentMeta<typeof Input >;
 
@@ -20,23 +24,11 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: 'Input',
+  placeholder: 'test',
+  autoFocus: false,
+  inputClassName: '',
+  className: '',
 };
 
-export const Focus = Template.bind({});
-Focus.args = {
-  label: 'Button',
-  autoFocus: true,
-};
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
