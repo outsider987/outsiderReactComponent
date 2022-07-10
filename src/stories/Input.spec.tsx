@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import * as React from 'react';
 import Input from './Input';
 
@@ -14,11 +14,14 @@ import Input from './Input';
 //   expect(actual).toBe(expected);
 // });
 describe('Input', () => {
-  it('renders', () => {
-    render(
-        <Input type='string' value={1} setInput={() => {}}></Input>,
+  it('renders and check input type', () => {
+    const inputValue = 'matti';
+    const co = render(
+        <Input type='string' value={inputValue} setInput={() => {}}></Input>,
     );
+    const input = co.getByTestId('add-word-input') as HTMLInputElement;
+    fireEvent.change(input, {target: {value: inputValue}});
+    expect(typeof input.value).toBe('string');
     
-    // expect(queryAllByAltText('')).toHaveLength(0);
   });
 });

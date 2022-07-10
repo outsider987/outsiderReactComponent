@@ -16,6 +16,7 @@ const Input: React.FC<Props> = (props: Props) => {
     <div className={`flex flex-col ` + props.className}>
       {props.label != undefined && <span className="flex">{props.label}</span>}
       <input
+        data-testid="add-word-input"
         style={{backgroundColor: props.backgroundColor}}
         className={`test w-auto focus:outline-none focus:border-[#FF9B33] 
             focus:opacity-100 tracking-[0.25px] placeholder:opacity-30
