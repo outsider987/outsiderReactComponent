@@ -1,34 +1,29 @@
 import React from 'react';
 // import './../index.scss';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import Input from '../components/Input';
+import ModalSpin from '../components/ModalSpin/ModalSpin';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Aha/Input',
-  component: Input,
+  title: 'Aha/ModalSpin',
+  component: ModalSpin,
 
   argTypes: {
     backgroundColor: {control: 'color'},
-    type: {
-      options: ['number', 'string'],
-      control: {type: 'radio'},
-    },
+
   },
-} as ComponentMeta<typeof Input >;
+} as ComponentMeta<typeof ModalSpin >;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Input > = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof ModalSpin > =
+(args) => <ModalSpin {...args} >this is Modal Loading test</ModalSpin>;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  primary: true,
-  label: 'Input',
-  placeholder: 'test',
-  autoFocus: false,
-  inputClassName: '',
+//   primary: true,
   className: '',
+  toggle:true
 };
 
 

@@ -1,33 +1,27 @@
 import React from 'react';
 // import './../index.scss';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import Input from '../components/Input';
+import Button from '../components/Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Aha/Input',
-  component: Input,
+  title: 'Aha/Button',
+  component: Button,
 
   argTypes: {
     backgroundColor: {control: 'color'},
-    type: {
-      options: ['number', 'string'],
-      control: {type: 'radio'},
-    },
+
   },
-} as ComponentMeta<typeof Input >;
+} as ComponentMeta<typeof Button >;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Input > = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof Button > =
+(args) => <Button {...args} >this is button test</Button>;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  primary: true,
-  label: 'Input',
-  placeholder: 'test',
-  autoFocus: false,
-  inputClassName: '',
+//   primary: true,
   className: '',
 };
 

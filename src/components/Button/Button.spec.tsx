@@ -1,6 +1,6 @@
-import { fireEvent, render } from '@testing-library/react';
+import {fireEvent, render} from '@testing-library/react';
 import * as React from 'react';
-import Input from './Input';
+import Button from './index';
 
 // test('adds 1 + 2 to equal 3', () => {
 //   // Arrange
@@ -13,15 +13,14 @@ import Input from './Input';
 //   // Assert
 //   expect(actual).toBe(expected);
 // });
-describe('Input', () => {
+describe('Button', () => {
   it('renders and check input type', () => {
     const inputValue = 'matti';
     const co = render(
-        <Input type='string' value={inputValue} setInput={() => {}}></Input>,
+        <Button ></Button>,
     );
-    const input = co.getByTestId('add-word-input') as HTMLInputElement;
-    fireEvent.change(input, {target: {value: inputValue}});
-    expect(typeof input.value).toBe('string');
-    
+    const button = co.getByTestId('btn') as HTMLButtonElement;
+    fireEvent.change(button, {target: {value: inputValue}});
+    expect(typeof button);
   });
 });
