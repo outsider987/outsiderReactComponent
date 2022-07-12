@@ -19,9 +19,10 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof SvgIcon > =
 (args) => {
-  return (<div className=' bg-slate-500'>
+  return (<div className=' bg-gray-800
+  bg-opacity-50 transition-all delay-150 ease-in-out'>
     <SvgIcon {...args} >up could be control </SvgIcon>
-    <div className='h-1 w-screen bg-black'></div>
+    <div className='h-1 w-full bg-black'></div>
     {
       Object.values(IconNames).map((item, index)=>{
         return <SvgIcon key={index} {...args} name={item} >
