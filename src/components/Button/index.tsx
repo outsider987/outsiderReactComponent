@@ -8,14 +8,8 @@ interface Props {
   onClick?: () => void;
 }
 
-const Button: React.FC<Props> = ({
-  children,
-  className,
-  onClick,
-  isRounded,
-  isWhite,
-}) => {
-  const whiteClass = `bg-white border border-black
+const Button: React.FC<Props> = (props) => {
+  const whiteClass = `bg-white 
    text-[#121212] hover:bg-[#121212] hover:text-white`;
   const darkClass = `bg-[#121212]  
    text-white hover:bg-white hover:text-[#121212]`;
@@ -23,13 +17,13 @@ const Button: React.FC<Props> = ({
     <button
       data-testid="btn"
       className={`flex font-bold justify-center border border-solid
-       border-white items-center
+       border-black items-center
     py-[0.8125rem] px-[0.625rem] leading-[100%] ${
-      isRounded ? 'rounded-full' : 'rounded'
-    } ${isWhite ? whiteClass : darkClass} ${className}`}
-      onClick={onClick}
+        props.isRounded ? 'rounded-full' : 'rounded'
+    } ${props.isWhite ? whiteClass : darkClass} ${props.className}`}
+      onClick={props.onClick}
     >
-      {children}
+      {props.children}
     </button>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-// import './../index.scss';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import ModalSpin from '../components/ModalSpin/ModalSpin';
 
@@ -21,9 +20,7 @@ const Template: ComponentStory<typeof ModalSpin > =
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-//   primary: true,
-  className: '',
-  toggle:true
+  toggle: true,
 };
 
 

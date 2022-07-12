@@ -1,5 +1,4 @@
 import React from 'react';
-// import './../index.scss';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import Input from '../components/Input';
 
@@ -12,7 +11,7 @@ export default {
     backgroundColor: {control: 'color'},
     type: {
       options: ['number', 'string'],
-      control: {type: 'radio'},
+      control: {type: 'select'},
     },
   },
 } as ComponentMeta<typeof Input >;
@@ -27,8 +26,6 @@ Primary.args = {
   label: 'Input',
   placeholder: 'test',
   autoFocus: false,
-  inputClassName: '',
-  className: '',
 };
 
 

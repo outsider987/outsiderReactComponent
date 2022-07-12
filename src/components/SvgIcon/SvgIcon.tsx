@@ -1,14 +1,29 @@
+/* eslint-disable max-len */
 import React from 'react';
 interface Props {
   name: string;
   className?: string;
   onClick?: () => void;
   children?: React.ReactNode;
+  color?:string
 }
+export const IconNames = {
+  logo: 'logo',
+  template: 'template',
+  edit: 'edit',
+  spin: 'spin',
+  arrow: 'arrow',
+
+};
+
+// const IconNames = {
+
+//   };
+
 const SvgICon: React.FC<Props> = (props: Props) => {
   const renderSVG = () => {
     switch (props.name) {
-      case 'logo':
+      case IconNames.logo:
         return (
           <svg
             width="35"
@@ -37,7 +52,7 @@ const SvgICon: React.FC<Props> = (props: Props) => {
           </svg>
         );
 
-      case 'template':
+      case IconNames.template:
         return (
           <svg
             width="24"
@@ -54,7 +69,7 @@ const SvgICon: React.FC<Props> = (props: Props) => {
             />
           </svg>
         );
-      case 'edit':
+      case IconNames.edit:
         return (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,22 +87,22 @@ const SvgICon: React.FC<Props> = (props: Props) => {
             <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
           </svg>
         );
-      case 'spin':
-        return (
-          <div className="animate-spin text-white">
-            <svg
-              focusable="false"
-              className="anticon-spin"
-              data-icon="loading"
-              fill="currentColor"
-              aria-hidden="true"
-              viewBox="0 0 1024 1024"
-            >
-              <path d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 00-94.3-139.9 437.71 437.71 0 00-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"></path>
-            </svg>
-          </div>
-        );
-      case 'arrow':
+    //   case IconNames.spin:
+    //     return (
+    //       <div className="animate-spin text-white">
+    //         <svg
+    //           focusable="false"
+    //           className="anticon-spin"
+    //           data-icon="loading"
+    //           fill="currentColor"
+    //           aria-hidden="true"
+    //           viewBox="0 0 1024 1024"
+    //         >
+    //           <path d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 00-94.3-139.9 437.71 437.71 0 00-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"></path>
+    //         </svg>
+    //       </div>
+    //     );
+      case IconNames.arrow:
         return (
           <svg
             width="26"
@@ -98,7 +113,7 @@ const SvgICon: React.FC<Props> = (props: Props) => {
           >
             <path
               d="M19.2702 4.10349L17.3333 2.16663L6.5 13L17.3333 23.8333L19.2702 21.8964L10.3737 13L19.2702 4.10349Z"
-              fill="white"
+              fill="currentColor"
             />
           </svg>
         );
@@ -108,7 +123,7 @@ const SvgICon: React.FC<Props> = (props: Props) => {
     }
   };
   return (
-    <span onClick={props.onClick} className={`w-fit ${props.className} `}>
+    <span onClick={props.onClick} className={`w-fit ${props.className} `} style={{color:props.color}}>
       {renderSVG()}
       {props.children}
     </span>
