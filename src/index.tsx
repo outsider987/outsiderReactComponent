@@ -1,3 +1,3 @@
-import Input from './stories/Input';
+import Input from './components/Input';
 
 export {Input};

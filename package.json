@@ -1,10 +1,10 @@
 {
   "name": "outsiderreact",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "incredible",
   "main": "index.tsx",
   "scripts": {
-    "build": "tsc",
+    "publish": "rm -rf dist && tsc && npm publish",
     "lint": "eslint --fix src/**/*.tsx ",
     "storybook": "sass index.scss index.css && start-storybook -p 6006",
     "build-storybook": "build-storybook",
