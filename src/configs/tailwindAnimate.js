@@ -14,4 +14,4 @@ const animates = {
   fadeIn: 'fadeIn 1s ease-in',
 }
 
-module.exports = { keyFrames, animates }
+export  { keyFrames, animates }

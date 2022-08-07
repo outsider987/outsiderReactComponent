@@ -1,4 +1,4 @@
-
+// import {keyFrames,animates} from './src/configs/tailwindAnimate';
 const {keyFrames,animates}= require('./src/configs/tailwindAnimate')
 module.exports = {
   addons: [
