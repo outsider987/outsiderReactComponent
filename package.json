@@ -6,8 +6,9 @@
   "scripts": {
     "publish": "rm -rf dist && tsc && npm publish",
     "lint": "npx prettier  src/**/*.{tsx,ts} --write && eslint --fix src/**/*.tsx ",
-    "start": "sass index.scss index.css && start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "dev": "sass index.scss index.css && start-storybook -p 6006",
+    "build": "build-storybook",
+    "start": "sass index.scss index.css && node server.js",
     "test": "jest --coverage"
   },
   "repository": {
@@ -78,6 +79,7 @@
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
-    "eslint-plugin-tailwindcss": "^3.6.0"
+    "eslint-plugin-tailwindcss": "^3.6.0",
+    "express": "^4.18.1"
   }
 }
