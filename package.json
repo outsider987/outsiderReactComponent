@@ -8,7 +8,7 @@
     "lint": "npx prettier  src/**/*.{tsx,ts} --write && eslint --fix src/**/*.tsx ",
     "dev": "sass index.scss index.css && start-storybook -p 6006",
     "build": "build-storybook",
-    "start": "sass index.scss index.css && node server.js",
+    "start": "node server.js",
     "test": "jest --coverage"
   },
   "repository": {

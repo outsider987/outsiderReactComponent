@@ -1,41 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657553247219" clover="3.2.0">
-  <project timestamp="1657553247220" name="All files">
-    <metrics statements="24" coveredstatements="17" conditionals="8" coveredconditionals="3" methods="3" coveredmethods="2" elements="35" coveredelements="22" complexity="0" loc="24" ncloc="24" packages="2" files="2" classes="2"/>
+<coverage generated="1659884245601" clover="3.2.0">
+  <project timestamp="1659884245601" name="All files">
+    <metrics statements="19" coveredstatements="12" conditionals="8" coveredconditionals="3" methods="3" coveredmethods="2" elements="30" coveredelements="17" complexity="0" loc="19" ncloc="19" packages="2" files="2" classes="2"/>
     <package name="Button">
-      <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="C:\Users\t7902\Documents\GitHub\outsiderReactComponent\src\components\Button\index.tsx">
-        <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\Users\t7902\Documents\GitHub\collectProject\outsiderReactComponent\src\components\Button\index.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Input">
       <metrics statements="12" coveredstatements="5" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
-      <file name="index.tsx" path="C:\Users\t7902\Documents\GitHub\outsiderReactComponent\src\components\Input\index.tsx">
+      <file name="index.tsx" path="C:\Users\t7902\Documents\GitHub\collectProject\outsiderReactComponent\src\components\Input\index.tsx">
         <metrics statements="12" coveredstatements="5" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
   </project>

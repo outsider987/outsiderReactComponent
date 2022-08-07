@@ -114,7 +114,8 @@ const SvgICon: React.FC<Props> = (props: Props) => {
         );
 
       default:
-        break;
+        return<></> 
+        
     }
   };
   return (
