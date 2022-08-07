@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 interface Props {
-  name: string
-  className?: string
-  onClick?: () => void
-  children?: React.ReactNode
-  color?: string
+  name: string;
+  className?: string;
+  onClick?: () => void;
+  children?: React.ReactNode;
+  color?: string;
 }
 export const IconNames = {
   logo: 'logo',

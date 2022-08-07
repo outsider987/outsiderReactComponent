@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string
-  children?: React.ReactNode
-  isRounded?: boolean
-  isWhite?: boolean
+  className?: string;
+  children?: React.ReactNode;
+  isRounded?: boolean;
+  isWhite?: boolean;
 }
 
 const Button: React.FC<Props> = (props) => {

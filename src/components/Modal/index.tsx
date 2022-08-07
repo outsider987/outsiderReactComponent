@@ -1,7 +1,7 @@
 import React from 'react';
 interface props {
-  toggle: boolean
-  children: React.ReactNode
+  toggle: boolean;
+  children: React.ReactNode;
 }
 const Modal: React.FC<props> = ({toggle, children}) => {
   if (toggle) {

@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  placeholder?: string
-  label?: string
-  className?: string
-  inputClassName?: string
-  setInput: (value: any) => void
-  autoFocus?: boolean
-  backgroundColor?: string
+  placeholder?: string;
+  label?: string;
+  className?: string;
+  inputClassName?: string;
+  setInput: (value: any) => void;
+  autoFocus?: boolean;
+  backgroundColor?: string;
 }
 const Input: React.FC<Props> = (props: Props) => {
   return (
