@@ -8,6 +8,6 @@ module.exports = {
   'parserOptions': {
     'ecmaVersion': 'latest'
   },
-  'plugins': ['@typescript-eslint'],
+  'plugins': ['@typescript-eslint','tailwindcss'],
   'rules': {}
 };

@@ -1,17 +1,14 @@
 import React from 'react';
 interface props {
-  toggle: boolean;
-  children: React.ReactNode;
+  toggle: boolean
+  children: React.ReactNode
 }
-const Modal: React.FC<props> = ({ toggle, children }) => {
+const Modal: React.FC<props> = ({toggle, children}) => {
   if (toggle) {
     return (
       <div
-        className={`absolute inset-0  ${
-          toggle ? 'modal-mount ' : 'modal-unmount '
-        }
-        bottom-0
-        top-0
+        className={`absolute inset-0  ${toggle ? 'fadeIn ' : 'fadeOut '}
+        bottom-0 top-0 right-0 left-0
         z-50
         flex
         h-full

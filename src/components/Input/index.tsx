@@ -1,15 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 
-interface Props {
-  placeholder?: string;
-  value: any;
-  label?: string;
-  className?: string;
-  inputClassName?: string;
-  type: string;
-  setInput: (value: any) => void;
-  autoFocus?: boolean;
-  backgroundColor?:string
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  placeholder?: string
+  label?: string
+  className?: string
+  inputClassName?: string
+  setInput: (value: any) => void
+  autoFocus?: boolean
+  backgroundColor?: string
 }
 const Input: React.FC<Props> = (props: Props) => {
   return (
@@ -18,13 +16,13 @@ const Input: React.FC<Props> = (props: Props) => {
       <input
         data-testid="add-word-input"
         style={{backgroundColor: props.backgroundColor}}
-        className={`test w-auto focus:outline-none focus:border-[#FF9B33] 
-            focus:opacity-100 tracking-[0.25px] placeholder:opacity-30
-          bg-black border-[3px] border-solid leading-[150%]
-          border-white border-opacity-50  
-           rounded-md pt-5 pb-[19px] px-[0.9375rem]
-           text-white
-            text-sm
+        className={`w-auto rounded-md border-2
+            border-solid border-opacity-50 bg-black
+          px-2 pt-5 pb-4 text-sm
+           leading-4  
+           tracking-wide text-white outline-none placeholder:opacity-30
+           focus:border-orange-400
+            focus:opacity-100
           ${props.inputClassName}`}
         type={props.type}
         placeholder={props.placeholder}

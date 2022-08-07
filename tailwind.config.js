@@ -1,13 +1,15 @@
+
+const {keyFrames,animates}= require('./src/configs/tailwindAnimate')
 module.exports = {
-    addons: [
-       'storybook-addon-sass-postcss',
-       {
-         name: 'storybook-addon-sass-postcss',
-         options: {
-           loadSassAfterPostCSS: true,
-         },
-       },
-          ],
+  addons: [
+    'storybook-addon-sass-postcss',
+    {
+      name: 'storybook-addon-sass-postcss',
+      options: {
+        loadSassAfterPostCSS: true,
+      },
+    },
+  ],
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
@@ -31,6 +33,12 @@ module.exports = {
       },
       fontFamily: {
         opensans: ['Open Sans', 'sans-serif'],
+      },
+      keyframes: {
+        ...keyFrames,
+      },
+      animation: {
+        ...animates,
       },
     },
   },

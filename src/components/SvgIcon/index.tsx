@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 interface Props {
-  name: string;
-  className?: string;
-  onClick?: () => void;
-  children?: React.ReactNode;
-  color?:string
+  name: string
+  className?: string
+  onClick?: () => void
+  children?: React.ReactNode
+  color?: string
 }
 export const IconNames = {
   logo: 'logo',
@@ -13,12 +13,7 @@ export const IconNames = {
   edit: 'edit',
   spin: 'spin',
   arrow: 'arrow',
-
 };
-
-// const IconNames = {
-
-//   };
 
 const SvgICon: React.FC<Props> = (props: Props) => {
   const renderSVG = () => {
@@ -89,7 +84,7 @@ const SvgICon: React.FC<Props> = (props: Props) => {
         );
       case IconNames.spin:
         return (
-          <div className="animate-spin flex w-5 text-white">
+          <div className="flex w-5 animate-spin text-white">
             <svg
               focusable="false"
               className="anticon-spin"
@@ -123,7 +118,11 @@ const SvgICon: React.FC<Props> = (props: Props) => {
     }
   };
   return (
-    <span onClick={props.onClick} className={`w-fit ${props.className} `} style={{color:props.color}}>
+    <span
+      onClick={props.onClick}
+      className={`w-fit ${props.className} `}
+      style={{color: props.color}}
+    >
       {renderSVG()}
       {props.children}
     </span>

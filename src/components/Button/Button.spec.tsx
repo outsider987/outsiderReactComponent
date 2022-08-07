@@ -16,9 +16,7 @@ import Button from './index';
 describe('Button', () => {
   it('renders and check input type', () => {
     const inputValue = 'matti';
-    const co = render(
-        <Button ></Button>,
-    );
+    const co = render(<Button></Button>);
     const button = co.getByTestId('btn') as HTMLButtonElement;
     fireEvent.change(button, {target: {value: inputValue}});
     expect(typeof button);

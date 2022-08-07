@@ -1,11 +1,10 @@
 import React from 'react';
 
-interface Props {
-  className?: string;
-  children?: React.ReactNode;
-  isRounded?: boolean;
-  isWhite?: boolean;
-  onClick?: () => void;
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string
+  children?: React.ReactNode
+  isRounded?: boolean
+  isWhite?: boolean
 }
 
 const Button: React.FC<Props> = (props) => {
@@ -16,10 +15,10 @@ const Button: React.FC<Props> = (props) => {
   return (
     <button
       data-testid="btn"
-      className={`flex font-bold justify-center border border-solid
-       border-black items-center
-    py-[0.8125rem] px-[0.625rem] leading-[100%] ${
-        props.isRounded ? 'rounded-full' : 'rounded'
+      className={`flex items-center justify-center border border-solid
+       border-black py-[0.8125rem]
+    px-[0.625rem] font-bold leading-[100%] ${
+      props.isRounded ? 'rounded-full' : 'rounded'
     } ${props.isWhite ? whiteClass : darkClass} ${props.className}`}
       onClick={props.onClick}
     >

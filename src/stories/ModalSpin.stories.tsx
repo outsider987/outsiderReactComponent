@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import ModalSpin from '../components/ModalSpin/ModalSpin';
+import ModalSpin from '../components/ModalSpin';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -9,18 +9,16 @@ export default {
 
   argTypes: {
     backgroundColor: {control: 'color'},
-
   },
-} as ComponentMeta<typeof ModalSpin >;
+} as ComponentMeta<typeof ModalSpin>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ModalSpin > =
-(args) => <ModalSpin {...args} >this is Modal Loading test</ModalSpin>;
+const Template: ComponentStory<typeof ModalSpin> = (args) => (
+  <ModalSpin {...args}>this is Modal Spin Loading test</ModalSpin>
+);
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   toggle: true,
 };
-
-
