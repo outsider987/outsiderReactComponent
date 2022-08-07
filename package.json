@@ -1,12 +1,12 @@
 {
   "name": "outsiderreact",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "incredible",
   "module": "module",
   "scripts": {
     "publish": "rm -rf dist && tsc && npm publish",
     "lint": "npx prettier  src/**/*.{tsx,ts} --write && eslint --fix src/**/*.tsx ",
-    "storybook": "sass index.scss index.css && start-storybook -p 6006",
+    "start": "sass index.scss index.css && start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest --coverage"
   },
