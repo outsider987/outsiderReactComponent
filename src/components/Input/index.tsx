@@ -5,7 +5,6 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   className?: string;
   inputClassName?: string;
-  setInput: (value: any) => void;
   autoFocus?: boolean;
   backgroundColor?: string;
 }
@@ -28,19 +27,7 @@ const Input: React.FC<Props> = (props: Props) => {
         placeholder={props.placeholder}
         value={props.value}
         autoFocus={props.autoFocus}
-        onChange={(e) => {
-          let result = undefined;
-          switch (e.target.type) {
-            case 'number':
-              result = Number(e.target.value);
-              break;
-
-            default:
-              result = e.target.value;
-              break;
-          }
-          props.setInput(result);
-        }}
+        onChange={props.onChange}
       />
     </div>
   );

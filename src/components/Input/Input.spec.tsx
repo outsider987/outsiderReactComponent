@@ -17,7 +17,7 @@ describe('Input', () => {
   it('renders and check input type', () => {
     const inputValue = 'matti';
     const co = render(
-        <Input type="string" value={inputValue} setInput={() => {}}></Input>,
+        <Input type="string" value={inputValue} ></Input>,
     );
     const input = co.getByTestId('add-word-input') as HTMLInputElement;
     fireEvent.change(input, {target: {value: inputValue}});
