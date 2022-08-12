@@ -14,6 +14,7 @@ const Button: React.FC<Props> = (props) => {
    text-white hover:bg-white hover:text-[#121212]`;
   return (
     <button
+      {...props}
       data-testid="btn"
       className={`flex items-center justify-center border border-solid
        border-black py-[0.8125rem]
